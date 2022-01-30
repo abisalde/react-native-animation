@@ -42,8 +42,8 @@ const TabArr = [
   {
     route: 'Home',
     label: 'Home',
-    icon: 'book',
-    type: Icons.AntDesign,
+    icon: 'home',
+    type: Icons.Feather,
     component: Home,
   },
   {
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 50,
     height: 50,
-    borderRadius: 25,
+    borderRadius: 50,
     borderColor: '#fff',
     backgroundColor: 'transparent',
     justifyContent: 'center',
@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fe12c4',
+    padding: 7,
     borderRadius: 25,
   },
   text: {
