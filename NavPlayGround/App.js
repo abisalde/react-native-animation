@@ -13,6 +13,7 @@ import CardView from 'react-native-cardview';
 import {NavigationContainer} from '@react-navigation/native';
 import SwitchSelector from 'react-native-switch-selector';
 import Navigation from './routes';
+import AppTab from './src/curveBottomTab';
 
 const colors = {
   white: '#fff',
@@ -54,7 +55,7 @@ const App = () => {
             {label: 'Masculino', value: 'm'}, //images.masculino = require('./path_to/assets/img/masculino.png')
           ]}
         />
-        {/*<Navigation /> */}
+        <Navigation />
       </View>
     </NavigationContainer>
   );
