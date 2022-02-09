@@ -1,13 +1,37 @@
 import React, {useEffect, useRef} from 'react';
 import * as Animatable from 'react-native-animatable';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Svg, {Mask, Path, G} from 'react-native-svg';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon, {Icons} from './Icons';
 
-const Home = () => {
+const Home = ({props}) => {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
+      <Svg
+        width={105}
+        height={100}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}>
+        <G clipPath="url(#clip0)">
+          <Path
+            d="M0 0H105V100H0V0Z"
+            fill="yellow"
+            fillOpacity="0.5"
+            fillRule="evenodd"
+          />
+        </G>
+        <Mask id="mask0" fill="white">
+          <Path
+            d="M0 0H105V100H0V0Z"
+            fill="purple"
+            fillOpacity="0.1"
+            fillRule="evenodd"
+          />
+        </Mask>
+      </Svg>
     </View>
   );
 };
