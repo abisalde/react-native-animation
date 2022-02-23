@@ -7,13 +7,14 @@
  */
 
 import 'react-native-gesture-handler';
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import * as React from 'react';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import CardView from 'react-native-cardview';
 import {NavigationContainer} from '@react-navigation/native';
 import SwitchSelector from 'react-native-switch-selector';
 import Navigation from './routes';
-import AppTab from './src/curveBottomTab';
+// import AppTab from './src/curveBottomTab';
+// import {PermissionModal, PermissionItem} from 'react-native-permissions-modal';
 
 const colors = {
   white: '#fff',
@@ -60,6 +61,41 @@ const App = () => {
     </NavigationContainer>
   );
 };
+
+// const App = () => {
+//   const ref = React.useRef().permModal;
+//   return (
+//     <View style={styles.container}>
+//       <TouchableOpacity
+//         style={styles.buttonStyle}
+//         onPress={() => ref.openModal()}>
+//         <Text style={{color: '#31243f'}}>Open Permission Modal</Text>
+//       </TouchableOpacity>
+//       <PermissionModal
+//         panGestureEnabled={false}
+//         closeOnOverlayTap={false}
+//         ref={ref}>
+//         <PermissionItem />
+//         <PermissionItem
+//           title="Camera"
+//           iconStatusColor="red"
+//           subtitle="To access camera features"
+//           source={{
+//             uri: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+//           }}
+//           onPress={() => alert('hello')}
+//         />
+//         <PermissionItem
+//           title="Internet"
+//           source={{
+//             uri: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+//           }}
+//           subtitle="To access the services, give us the permission"
+//         />
+//       </PermissionModal>
+//     </View>
+//   );
+// };
 
 const styles = StyleSheet.create({
   container: {
