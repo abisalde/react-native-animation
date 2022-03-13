@@ -18,6 +18,7 @@
       android:theme="@style/AppTheme">
       <activity
         android:name=".MainActivity"
+        android:exported="true"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
         android:launchMode="singleTask"
@@ -26,7 +27,7 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        <activity android:name=".otherActivity" android:exported="true"/>
+       
       </activity>
     </application>
 </manifest>
